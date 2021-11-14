@@ -1,26 +1,28 @@
 import "./App.css";
+import React, {Fragment} from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
+import Step1 from "./Step1";
+import Step2 from "./Step2";
+import Step3 from "./Step3";
 
-const Step1 = () => <>Step1</>;
-const Step2 = () => <>Step2</>;
-const Step3 = () => <>Step3</>;
 const Result = () => <>Result</>;
-
 
 function App() {
   return (
-    <>
-      <Header />
+    // <>
       <Router>
+      <Fragment>
+      <Header />
         <Routes>
-          <Route exact path="/" element={<Step1/>}/>
-          <Route path="step2" element={<Step2/>} />
-          <Route path="step3" element={<Step3/>} />
-          <Route path="result" element={<Result/>} />
+          <Route exact path="/" element={<Step1 />} />
+          <Route path="step2" element={<Step2 />} />
+          <Route path="step3" element={<Step3 />} />
+          <Route path="result" element={<Result />} />
         </Routes>
+        </Fragment>
       </Router>
-    </>
+    // </>
   );
 }
 

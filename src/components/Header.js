@@ -1,5 +1,5 @@
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
   const styles = useStyles();
 
-  return <Typography className={styles.root}>form with multiple inputs</Typography>;
+  return <Typography className={styles.root} component="h1" variant="h5">form with multiple inputs</Typography>;
 };
 
 export default Header;
